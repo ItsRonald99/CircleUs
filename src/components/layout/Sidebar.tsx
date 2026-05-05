@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-  { href: "/dashboard", icon: Users, label: "Contacts" },
+  { href: "/contacts", icon: Users, label: "Contacts" },
 ];
 
 export function Sidebar() {
