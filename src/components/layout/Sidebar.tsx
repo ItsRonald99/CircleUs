@@ -35,7 +35,8 @@ export function Sidebar() {
         {navItems.map((item) => {
           const Icon = item.icon;
           const active =
-            pathname === item.href || pathname.startsWith("/contacts");
+            pathname === item.href ||
+            (item.href !== "/dashboard" && pathname.startsWith(item.href));
           return (
             <Link
               key={item.label}

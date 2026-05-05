@@ -42,6 +42,7 @@ export async function createContactAction(formData: FormData) {
   });
 
   revalidatePath("/dashboard");
+  revalidatePath("/contacts");
 }
 
 export async function updateContactAction(id: string, formData: FormData) {
@@ -60,6 +61,7 @@ export async function updateContactAction(id: string, formData: FormData) {
   });
 
   revalidatePath("/dashboard");
+  revalidatePath("/contacts");
   revalidatePath(`/contacts/${id}`);
 }
 
@@ -70,4 +72,5 @@ export async function deleteContactAction(id: string) {
 
   await deleteContact(db, id, user.id);
   revalidatePath("/dashboard");
+  revalidatePath("/contacts");
 }
